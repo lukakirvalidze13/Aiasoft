@@ -30,9 +30,6 @@ int right(int x){
 int main(){
 
 
-
-    //cout << up(1234) << " " << down(1234) << " " << left(1234) << ' ' << right(1234) << endl;
-
     queue <int> q;
     vector <int> used(10000,0);
     int n, m;

@@ -3,7 +3,6 @@
 /*
 I am exploring a maze of rooms
 Each room has doors to other roomes
-
 I start in one room and my goal is to visit every room i can reach, going as deep as possible before going back and trying another door.
 
 */
@@ -20,6 +19,7 @@ int cnt = 0;                // counter for visited nodes
 void DFS(int x){
     used[x] = 1; //Mark current note as visited
     cnt ++; //count it
+    cout << "Visited: " << x << endl;
 
     //Loop through all possible nodes
     for(int k = 1; k<=n; ++k){
@@ -40,7 +40,18 @@ void DFS(int x){
 
 int main(){
 
+    cin >> n >> m;
 
+    for(int i = 0; i<m; ++m){
+        int a,b;
+        cin>> a >> b;
+        G[a][b] = 1;
+        G[b][a] = 1; //can walk both ways between a and b
+    }
+
+    cin >> v; //starting node where to begin
+    DFS(v);
+    cout << "total visited nodes: " << cnt << endl;
 
     return 0;
 }
