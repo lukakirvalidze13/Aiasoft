@@ -1,7 +1,7 @@
 #include <iostream>
 #include <queue>
 using namespace std;
-int g[21][21], used[21];
+int g[51][51], used[51];
 int main(){
     int n,m;
     cin >> n >> m;
@@ -24,10 +24,10 @@ int main(){
                 int v = q.front();
                 q.pop();
                 for(int i = 1; i <= n; ++i)
-                    if (g[v][i] == 1);
+                    if (g[v][i] == 1)
                         if (used[i] == 0){
                             q.push(i);
-                            used[i] = used[i] + 1;
+                            used[i] = 1;
                         }
             }
         }
