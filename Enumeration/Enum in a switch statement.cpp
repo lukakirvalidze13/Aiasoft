@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 enum level{
-    LOW = 1,
+    LOW = 69,
     MEDIUM,
     HIGH
 };
@@ -9,13 +9,13 @@ int main(){
     enum level myVar = HIGH;
 
     switch(myVar){
-        case 1:
+        case 69:
         cout << "Low level";
         break;
-        case 2:
+        case 70:
         cout << "Medium level";
         break;
-        case 3:
+        case 71:
         cout << "High level";
         break;
     }
